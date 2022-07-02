@@ -27,17 +27,24 @@ $(call inherit-product, device/samsung/crownlte/device.mk)
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 
-## Inherit some common Pixel OS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+## Inherit some common corvus stuff
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := aosp_crownlte
+PRODUCT_NAME := corvus_crownlte
 PRODUCT_DEVICE := crownlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N960F
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Corvus Maintainer
+CORVUS_MAINTAINER=Mia Ryujin
+
+# Target Variant
+USE_GAPPS=true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
 BUILD_FINGERPRINT := "samsung/crownltexx/crownlte:10/QP1A.190711.020/N960FXXU9FUK1:user/release-keys"
 
